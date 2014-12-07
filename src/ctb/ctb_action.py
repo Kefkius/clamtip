@@ -949,6 +949,7 @@ def init_regex(ctb):
                 rval1 = rval1.replace('{REGEX_USER}', ctb.conf.regex.values.username.regex)
                 rval1 = rval1.replace('{REGEX_AMOUNT}', ctb.conf.regex.values.amount.regex)
                 rval1 = rval1.replace('{REGEX_KEYWORD}', ctb.conf.regex.values.keywords.regex)
+                rval1 = rval1.replace('{REGEX_ADDRESS}', cc['clam'].regex.address)
 
                 if actions[a].regex[r].rg_coin > 0:
 
@@ -1029,7 +1030,21 @@ def init_regex(ctb):
                          'rg_keyword':      actions[a].regex[r].rg_keyword,
                          'rg_address':      actions[a].regex[r].rg_address,
                          'rg_to_user':      actions[a].regex[r].rg_to_user,
-                         'coin':            None,
+                         'coin':            'clam',
+                         'fiat':            None
+                        })
+                    lg.debug("init_regex(): ADDED %s: %s", entry.action, entry.regex)
+                    ctb.runtime['regex'].append(entry)
+                # Use clam if coin not specified
+                elif actions[a].regex[r].rg_amount > 0:
+                    entry = ctb_misc.DotDict(
+                        {'regex':           rval1,
+                         'action':          a,
+                         'rg_amount':       actions[a].regex[r].rg_amount,
+                         'rg_keyword':      actions[a].regex[r].rg_keyword,
+                         'rg_address':      actions[a].regex[r].rg_address,
+                         'rg_to_user':      actions[a].regex[r].rg_to_user,
+                         'coin':            'clam',
                          'fiat':            None
                         })
                     lg.debug("init_regex(): ADDED %s: %s", entry.action, entry.regex)
