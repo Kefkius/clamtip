@@ -57,36 +57,11 @@ sql:
       desc: "Top 10 all-time tips as determined by their USD/EUR (fiat) value."
       type: table
       query: "SELECT from_user, to_user, coin_val, coin, fiat_val, fiat, msg_link FROM t_action WHERE type ='givetip' AND state = 'completed' AND fiat IN ('usd', 'eur') ORDER BY fiat_val DESC LIMIT 10"
-    07a_top_5_tips_btc:
-      name: "Top 5 Tips (BTC)"
-      desc: "Top 5 all-time BTC tips as determined by coin amount"
+    07a_top_5_tips_clam:
+      name: "Top 5 Tips (CLAM)"
+      desc: "Top 5 all-time CLAM tips as determined by coin amount"
       type: table
-      query: "SELECT from_user, to_user, coin_val, coin, fiat_val, fiat, msg_link FROM t_action WHERE type ='givetip' AND state = 'completed' AND coin = 'btc' ORDER BY coin_val DESC LIMIT 5"
-    07b_top_5_tips_ltc:
-      name: "Top 5 Tips (LTC)"
-      desc: "Top 5 all-time LTC tips as determined by coin amount"
-      type: table
-      query: "SELECT from_user, to_user, coin_val, coin, fiat_val, fiat, msg_link FROM t_action WHERE type ='givetip' AND state = 'completed' AND coin = 'ltc' ORDER BY coin_val DESC LIMIT 5"
-    07c_top_5_tips_ppc:
-      name: "Top 5 Tips (PPC)"
-      desc: "Top 5 all-time PPC tips as determined by coin amount"
-      type: table
-      query: "SELECT from_user, to_user, coin_val, coin, fiat_val, fiat, msg_link FROM t_action WHERE type ='givetip' AND state = 'completed' AND coin = 'ppc' ORDER BY coin_val DESC LIMIT 5"
-    07d_top_5_tips_nmc:
-      name: "Top 5 Tips (NMC)"
-      desc: "Top 5 all-time NMC tips as determined by coin amount"
-      type: table
-      query: "SELECT from_user, to_user, coin_val, coin, fiat_val, fiat, msg_link FROM t_action WHERE type ='givetip' AND state = 'completed' AND coin = 'nmc' ORDER BY coin_val DESC LIMIT 5"
-    07e_top_5_tips_xpm:
-      name: "Top 5 Tips (XPM)"
-      desc: "Top 5 all-time XPM tips as determined by coin amount"
-      type: table
-      query: "SELECT from_user, to_user, coin_val, coin, fiat_val, fiat, msg_link FROM t_action WHERE type ='givetip' AND state = 'completed' AND coin = 'xpm' ORDER BY coin_val DESC LIMIT 5"
-    07f_top_5_tips_mec:
-      name: "Top 5 Tips (MEC)"
-      desc: "Top 5 all-time MEC tips as determined by coin amount"
-      type: table
-      query: "SELECT from_user, to_user, coin_val, coin, fiat_val, fiat, msg_link FROM t_action WHERE type ='givetip' AND state = 'completed' AND coin = 'mec' ORDER BY coin_val DESC LIMIT 5"
+      query: "SELECT from_user, to_user, coin_val, coin, fiat_val, fiat, msg_link FROM t_action WHERE type ='givetip' AND stats = 'completed' AND coin = 'clam' ORDER BY coin_val DESC LIMIT 5"
     08_top_10_receivers:
       name: "Top 10 Receivers"
       desc: "Top 10 all-time tip receivers as determined by total USD/EUR (fiat) value of their received tips."

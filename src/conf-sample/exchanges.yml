@@ -9,7 +9,7 @@ blockchaininfo:
     uppercase: true
 
 vircurex:
-    enabled: true
+    enabled: false
     domain: 'api.vircurex.com'
     https: true
     urlpaths: ['/api/get_highest_bid.json?base={THING_FROM}&alt={THING_TO}', '/api/get_lowest_ask.json?base={THING_FROM}&alt={THING_TO}']
@@ -19,7 +19,7 @@ vircurex:
     uppercase: true
 
 btce:
-    enabled: true
+    enabled: false
     domain: 'btc-e.com'
     https: true
     urlpaths: ['/api/2/{THING_FROM}_{THING_TO}/ticker']
@@ -59,7 +59,7 @@ campbx:
     uppercase: false
 
 cryptsy:
-    enabled: true
+    enabled: false
     domain: 'pubapi.cryptsy.com'
     https: false
     urlpaths: ['/api.php?method=marketdatav2']
@@ -69,7 +69,7 @@ cryptsy:
     uppercase: true
 
 bter:
-    enabled: true
+    enabled: false
     domain: 'bter.com'
     https: true
     urlpaths: ['/api/1/ticker/{THING_FROM}_{THING_TO}']
@@ -79,7 +79,7 @@ bter:
     uppercase: false
 
 cryptotrade:
-    enabled: true
+    enabled: false
     domain: 'crypto-trade.com'
     https: true
     urlpaths: ['/api/1/ticker/{THING_FROM}_{THING_TO}']
@@ -89,7 +89,7 @@ cryptotrade:
     uppercase: false
 
 coinse:
-    enabled: true
+    enabled: false
     domain: 'www.coins-e.com'
     https: true
     urlpaths: ['/api/v2/markets/data/']
@@ -104,6 +104,6 @@ cryptocoincharts:
     https: false
     urlpaths: ['/tradingPair/{THING_FROM}_{THING_TO}']
     jsonpaths: ['price']
-    coinlist: ['btc','ltc','ppc','nmc','xmp','mec','bqc','dgc','ifc','ixc','mnc','qrk','sbc','zet','doge','nxt','msc','ftc','nvc','dvc','frc','trc']
+    coinlist: ['btc','ltc','ppc','nmc','xmp','mec','bqc','dgc','ifc','ixc','mnc','qrk','sbc','zet','doge','nxt','msc','ftc','nvc','dvc','frc','trc','clam']
     fiatlist: ['usd','eur']
     uppercase: false

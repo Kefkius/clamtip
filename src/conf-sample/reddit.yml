@@ -9,7 +9,7 @@ scan:
 
 help:
     enabled: true
-    url: 'http://www.reddit.com/r/mysubreddit/wiki/index'
+    url: 'http://www.reddit.com/r/CLAMClient/wiki/index'
 
 contact:
     enabled: true
@@ -24,7 +24,7 @@ messages:
 
 redeem:
     unit: 'usd'
-    multicoin: true
+    multicoin: false
     min_karma: 150
     base: 0.1
     multiplier:
@@ -43,6 +43,6 @@ stats:
     userflair: false
     subreddit: 'mysubreddit'
     page: 'stats'
-    url: 'http://www.reddit.com/r/mysubreddit/wiki/stats'
+    url: 'http://www.reddit.com/r/CLAMClient/wiki/stats'
     page_tips: 'tips'
-    url_tips: 'http://www.reddit.com/r/mysubreddit/wiki/tips'
+    url_tips: 'http://www.reddit.com/r/CLAMClient/wiki/tips'
