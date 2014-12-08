@@ -1,3 +1,11 @@
+This is a CLAM-specific fork of ALTcointip. The most notable difference is that coin names are not required during commands. This bot will always assume that you mean CLAM.
+Make sure the CLAM wallet that the bot uses is run with these options in clam.conf:
+
+    enableaccounts=1
+    staking=0
+
+The rest of this README is from ALTcointip.
+
 # Reddit ALTcointip bot
 
 ## Introduction
