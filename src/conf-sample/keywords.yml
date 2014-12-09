@@ -220,3 +220,15 @@ half:
     value: 0.5
     for_fiat: true
     for_coin: true
+
+bucket:
+    value: 10.0
+    for_fiat: false
+    for_coin: true
+    message: '{USER_FROM} ^gives {USER_TO} ^a ^bucket ^of ^clams ^worth {AMOUNT}'
+
+clampede:
+    value: 20.0
+    for_fiat: false
+    for_coin: true
+    message: '{USER_FROM} ^sends ^a ^CLAMPEDE ^toward {USER_TO}, ^who ^gets ^a ^trampling ^worth {AMOUNT}'
